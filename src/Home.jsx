@@ -3,6 +3,7 @@ import './App.css'
 import './About.css'
 
 function Home() {
+  const baseAssetPath = import.meta.env.BASE_URL
   const [openRaceId, setOpenRaceId] = useState(null)
   const [isCalendarExpanded, setIsCalendarExpanded] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -120,7 +121,7 @@ function Home() {
       <header className="top-nav-wrap">
         <nav className="top-nav" aria-label="Primary">
           <div className="brand">
-            <img className="brand-logo" src="/logo.png" alt="Jayden Brooks logo" />
+            <img className="brand-logo" src={`${baseAssetPath}logo.png`} alt="Jayden Brooks logo" />
             <span>JAYDEN BROOKS</span>
           </div>
           <ul className="menu-list">
@@ -132,7 +133,7 @@ function Home() {
 
         <div className="mobile-top-bar" aria-label="Mobile header">
           <div className="mobile-brand">
-            <img className="mobile-brand-logo" src="/logo.png" alt="Jayden Brooks logo" />
+            <img className="mobile-brand-logo" src={`${baseAssetPath}logo.png`} alt="Jayden Brooks logo" />
             <span>JAYDEN BROOKS</span>
           </div>
 
@@ -161,7 +162,7 @@ function Home() {
       >
         <div className="mobile-sidebar-header">
           <div className="mobile-sidebar-brand">
-            <img className="mobile-sidebar-logo" src="/logo.png" alt="Jayden Brooks logo" />
+            <img className="mobile-sidebar-logo" src={`${baseAssetPath}logo.png`} alt="Jayden Brooks logo" />
             <span>Navigation</span>
           </div>
           <button
@@ -199,7 +200,7 @@ function Home() {
       <main className="editorial-stage" id="hero">
         <section className="collage" aria-label="Featured photos">
           <figure className="main-shot">
-            <img src="/main_page.jpeg" alt="Jayden Brooks in karting gear" />
+            <img src={`${baseAssetPath}main_page.jpeg`} alt="Jayden Brooks in karting gear" />
           </figure>
           <p className="vertical-title" aria-hidden="true">BROOKS</p>
         </section>
@@ -279,7 +280,7 @@ function Home() {
 
         <aside className="driver-card">
           <div className="driver-card-photo">
-            <img src="/second_pictureJPG.JPG" alt="Jayden Brooks racing" />
+            <img src={`${baseAssetPath}second_pictureJPG.JPG`} alt="Jayden Brooks racing" />
           </div>
           <div className="driver-card-info">
             <h3 className="driver-name">
@@ -322,7 +323,7 @@ function Home() {
         <div className="simracing-media">
           <img
             className="simracing-video"
-            src="/image_3.jpeg"
+            src={`${baseAssetPath}image_3.jpeg`}
             alt="Jayden Brooks sim racing session"
           />
         </div>
@@ -388,7 +389,7 @@ function Home() {
 
       <section className="contact-stage" id="contact" aria-label="Contact section">
         <div className="contact-media">
-          <img src="/contact.JPG" alt="Jayden Brooks contact" />
+          <img src={`${baseAssetPath}contact.JPG`} alt="Jayden Brooks contact" />
         </div>
 
         <div className="contact-copy">
