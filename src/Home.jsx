@@ -321,11 +321,15 @@ function Home() {
         </div>
 
         <div className="simracing-media">
-          <img
+          <video
             className="simracing-video"
-            src={`${baseAssetPath}image_3.jpeg`}
-            alt="Jayden Brooks sim racing session"
-          />
+            src={`${baseAssetPath}hotlap-web.mp4`}
+            controls
+            preload="metadata"
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
